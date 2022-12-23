@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Git</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Git <a href="git-hub.html">(Go to GitHub docs)</a></h1>
+    <main>
+        <div class="commands">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Git commands</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>sudo apt install git-all</td>
+                        <td>Install Git on Linux</td>
+                    </tr>
+                    <tr>
+                        <td>git</td>
+                        <td>Get list of git command</td>
+                    </tr>
+                    <tr>
+                        <td>git init</td>
+                        <td>Initialise a Git repository in currently navigated directory</td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th colspan="2">Working with commits</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>git add &lt;file_name&gt;</td>
+                        <td>Stage code changes</td>
+                    </tr>
+                    <tr>
+                        <td>git rm --cached &lt;file_name&gt;</td>
+                        <td>Unstage code changes</td>
+                    </tr>
+                    <tr>
+                        <td>git commit -m "&lt;message&gt;"</td>
+                        <td>Create a commit for the staged changes</td>
+                    </tr>
+                    <tr>
+                        <td>git status</td>
+                        <td>Displays current state of repository</td>
+                    </tr>
+                    <tr>
+                        <td>git log</td>
+                        <td>Displays the list of the commits for the current branch</td>
+                    </tr>
+                    <tr>
+                        <td>git checkout &lt;commit_ID&gt;</td>
+                        <td>Temporarily move back to commit</td>
+                    </tr>
+                    <tr>
+                        <td>git revert &lt;commit_ID&gt;</td>
+                        <td>Revert the changes of commit</td>
+                    </tr>
+                    <tr>
+                        <td>git reset --hard &lt;commit_ID&gt;</td>
+                        <td>Undo commit(s) up to commit with given ID by deleting commits</td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th colspan="2">Working with branches</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>git branch</td>
+                        <td>Lists all the branches</td>
+                    </tr>
+                    <tr>
+                        <td>git branch &lt;branch_name&gt;</td>
+                        <td>Create a new branch</td>
+                    </tr>
+                    <tr>
+                        <td>git branch &lt;branch_name&gt; &lt;commit_ID&gt;</td>
+                        <td>Create branch from certain commit</td>
+                    </tr>
+                    <tr>
+                        <td>git checkout &lt;branch_name&gt;</td>
+                        <td>Move to branch</td>
+                    </tr>
+                    <tr>
+                        <td>git checkout -b &lt;branch_name&gt;</td>
+                        <td>Create new branch and move to the new branch</td>
+                    </tr>
+                    <tr>
+                        <td>git checkout -b &lt;branch_name&gt; &lt;commit_ID&gt;</td>
+                        <td>Create new branch from certain commit and move to the new branch</td>
+                    </tr>
+                    <tr>
+                        <td>git branch -D &lt;branch_name&gt;</td>
+                        <td>Delete a branch</td>
+                    </tr>
+                    <tr>
+                        <td>git merge &lt;branch_name&gt;</td>
+                        <td>Merge branches</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="instructions">
+            <div class="container mb-2">
+                <h2>Instaling git</h2>
+                <p class="mb-1">For <strong>windows</strong> go to <a target="_blank" href="https://git-scm.com">https://git-scm.com</a>, and download installation file and install it.</p>
+                <p>For <strong>Linux</strong> use terminal command: <span class="inline-box"><strong>sudo apt install git-all</strong></span></p>
+            </div>
+
+            <div class="container mb-2">
+                <h2>Initialising git repository</h2>
+                <p class="mb-1">To be able to use git we need to initialise git repository first.</p>
+                <p class="mb-1">Use terminal command: <span class="inline-box"><strong>git init</strong></span>.</p>
+                <p class="mb-1">This will create invisible '.git' folder.</p>
+            </div>
+
+            <div class="container mb-2">
+                <h2>Excluding files from staging</h2>
+                <p class="mb-1">To ignore files and folders when running 'git add .' we use <strong>.gitignore</strong> file.</p>
+                <p class="mb-1">Simply create this file and in it write names of files and folders that should be excluded.</p>
+                <img src="screenshots/gitignore.png" class="mb-1" height="150px">
+            </div>
+
+            <div class="container mb-2">
+                <h2>Working with commits</h2>
+                <h3>Create a commit</h3>
+                <p class="mb-1">Creating new commit is 2 step process.</p>
+                <p class="mb-1"><strong>1st step</strong>: Staging files <span class="inline-box"><strong>git add &lt;file_name1&gt; &lt;file_name2&gt;</strong></span> for particular files, or <span class="inline-box"><strong>git add .</strong></span> for all modified / new files.</p>
+                <p class="mb-1">For staging files located in subfolder <span class="inline-box"><strong>git add subfolder/&lt;file_name&gt;</strong></span>.</p>
+                <p class="mb-1">To unstage staged file use <span class="inline-box"><strong>git rm --cached &lt;file_name&gt;</strong></span> command.</p>
+                <p class="mb-1">To check current state of repository use <span class="inline-box"><strong>git status</strong></span> command. This will show lists of files that are staged and not staged for commit.</p>
+                <p class="mb-1"><strong>2nd step</strong>: Commiting staged files <span class="inline-box"><strong>git commit -m "&lt;message&gt;"</strong></span>.</p>
+                <hr />
+                
+                <h3>Move between commits</h3>
+                <p class="mb-1">To display chronologically ordered list or commits use <span class="inline-box"><strong>git log</strong></span> command.</p>
+                <p class="mb-1"><strong>git log</strong> will only display list of commits older than currently checked out commit</p>
+                <img src="screenshots/commit.png" class="mb-1" height="100px">
+                <p class="mb-1">We can see <strong>commit ID</strong> (yellow) and next to it (HEAD -> main.)</p>
+                <p class="mb-1"><strong>HEAD</strong> is pointer that points to the latest commit by default.</p>
+                <p class="mb-1">In this (default) state it will also show branch name (HEAD -> <strong>main</strong> / <strong>master</strong>).</p>
+                <p class="mb-1">We can move (detach) the HEAD pointer between commits with command <span class="inline-box"><strong>git checkout &lt;commit_ID&gt;</strong></span>.</p>
+                <p class="mb-1">Changing position of the HEAD will reflect in our code. Code version corresponding to pointed commit will be loaded.</p>
+                <p class="mb-1">When HEAD is detached it will no longer show branch name <strong>(HEAD)</strong>.</p>
+                <img src="screenshots/head-detached.png" class="mb-1" height="100px">
+                <p class="mb-1">To get back to latest commit checkout with branch name <span class="inline-box"><strong>git checkout &lt;branch_name&gt;</strong></span>, in this case '<strong>main</strong>' branch.</p>
+                <hr />
+
+                <h3>Undo commits</h3>
+                <p class="mb-1">To undo changes made in particular commit use <span class="inline-box"><strong>git revert &lt;commit_ID&gt;</strong></span>.</p>
+                <p class="mb-1">This won't delete a commit. <br />It will actually create new commit with <strong>reverted changes that have been made in that commit</strong> with an ID provided, not all changes since that commit.</p>
+                <p class="mb-1">After this command you will be prompted for confirming default message or write your own.</p>
+                <hr />
+
+                <h3>Delete a commits</h3>
+                <p class="mb-1">To delete a commit use <span class="inline-box"><strong>git reset --hard &lt;commit_ID&gt;</strong></span>.</p>
+                <p class="mb-1"><strong>WARNING</strong>: This will also delete <strong>all</strong> commits <strong>since</strong> that commit, and this is irreversible.</p>
+            </div>
+
+            <div class="container mb-2">
+                <h2>Working with branches</h2>
+                <p class="mb-1">To see list of all the branches in current repository use <span class="inline-box"><strong>git branch</strong></span> command.</p>
+                <p class="mb-1">Asterisk symbol (*) will indicate branch you are currently on.</p>
+                <img src="screenshots/branch.png" class="mb-1" height="50px">
+                <hr />
+
+                <h3>Create a branch</h3>
+                <p class="mb-1">To create new branch use <span class="inline-box"><strong>git branch &lt;branch_name&gt;</strong></span> command.</p>
+                <p class="mb-1">This will create new branch where the latest commit from previous branch will be starting commit in newly created branch.</p>
+                <p class="mb-1">Newly created branch will contain all commits from prevous branch.</p>
+                <p class="mb-1">Creating branch from certain commit can be done with <span class="inline-box"><strong>git branch &lt;branch_name&gt; &lt;commit_ID&gt;</strong></span> command.</p>
+
+                <hr />
+
+                <h3>Move between branches</h3>
+                <p class="mb-1">To navigate to certain branches use <span class="inline-box"><strong>git checkout &lt;branch_name&gt;</strong></span> command.</p>
+                <p class="mb-1">To simultaneously create a branch <strong>and</strong> move to newly created branch use <span class="inline-box"><strong>git checkout -b &lt;branch_name&gt;</strong></span> command.</p>
+                <p class="mb-1">To create branch from certain commit and navigate to it use <span class="inline-box"><strong>git checkout -b &lt;branch_name&gt; &lt;commit_ID&gt;</strong></span> command.</p>
+                <hr />
+
+                <h3>Delete a branch</h3>
+                <p class="mb-1">To delete a branch use <span class="inline-box"><strong>git branch -D &lt;branch_name&gt;</strong></span> command.</p>
+                <hr />
+
+                <p class="mb-1">If commit is made on a newly created branch you can see by listing commits with '<strong>git log</strong>' where is main branch left behinde</p>
+                <img src="screenshots/branch-surpassing.png" class="mb-1" height="150px">
+                <hr />
+
+                <h3>Merging branches</h3>
+                <p class="mb-1">To merge a branch first you need to navigate to the branch to which will another branch be merged.</p>
+                <p class="mb-1">Then use <span class="inline-box"><strong>git merge &lt;branch_name&gt;</strong></span> command.</p>
+                <p class="mb-1">e.g. Checkout to 'main' branch and then merge 'feature-restructure' branch into the main branch (git merge feature-restructure)</p>
+                <p class="mb-1">By merging branches you are creating new commit thus you will be prompted with commit message</p>
+                <p class="mb-1">When listing commits in the main branch you can see where secondary branch is left behinde in relation to main branch since merging.</p>
+                <img src="screenshots/merge.png" class="mb-1" height="200px">
+
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

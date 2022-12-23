@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>GitHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>GitHub<a href="git.html">(Go to Git docs)</a></h1>
+    <main>
+        <div class="commands">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Git commands</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>git remote add</td>
+                        <td>Connect remote repository to local Git repository</td>
+                    </tr>
+                    <tr>
+                        <td>git push</td>
+                        <td>Upload local commits</td>
+                    </tr>
+                    <tr>
+                        <td>git pull</td>
+                        <td>Download remote commits</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="instructions">
+            <div class="container mb-2">
+                <h2>Creating GitHub account</h2>
+                <p class="mb-1">To create github account go to <a target="_blank" href="https://github.com/">https://github.com/</a>, click on 'Sign up' and fill out the registration form.</p>
+                <img src="screenshots/github-signup.png" class="mb-1" height="200px">
+                <p class="mb-1">Confirm account creation via email.</p>
+            </div>
+
+            <div class="container mb-2">
+                <h2>Creating new repository</h2>
+                <p class="mb-1">To create new github repository click + icon in top right corner and choose 'New repository'.</p>
+                <img src="screenshots/new-repo.png" class="mb-1" height="200px">
+                <p class="mb-1">Fill in new repository name, choose 'Public' or 'Private' which determines who can see your repository, but no one can make edits without your permision.</p>
+                <p class="mb-1">Rest of the fields are optional.</p>
+                <p class="mb-1">After filling the form click 'Create repository' button on the bottom of the form.</p>
+                <img src="screenshots/new-repo-form.png" class="mb-1" height="500px">
+            </div>
+
+            <div class="container mb-2">
+                <h2>Connecting git repository (local) to GitHub repository (cloud)</h2>
+                <p class="mb-1">To connect remote repository to local repository use <span class="inline-box"><strong>git remote add &lt;repo_name&gt; &lt;github_repo_url&gt;</strong></span>.</p>
+                <p class="mb-1">By convention <strong>&lt;repo_name&gt;</strong> or local identifier is usually 'origin'.</p>
+                <p class="mb-1"><strong>&lt;github_repo_url&gt;</strong> can be found on github repository.</p>
+                <img src="screenshots/repo-url.png" class="mb-1" height="100px">
+                
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
