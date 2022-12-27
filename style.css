@@ -42,6 +42,12 @@ main {
   box-shadow: 0 0.16rem 0.75rem #00000024;
 }
 
+.img-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
 hr {
   margin-block: 1.5rem;
   height: 1px;
@@ -66,6 +72,10 @@ h2 {
   margin-bottom: 2rem;
   color: #f1502f;
   border-bottom: 2px solid currentColor;
+}
+
+h2.indigo {
+  color: #0d1117;
 }
 
 h3 {
@@ -114,6 +124,10 @@ thead tr {
 thead:first-of-type tr {
   background-color: #f1502f;
   font-size: 2rem;
+}
+
+thead tr.indigo {
+  background-color: #0d1117;
 }
 
 /* tr {

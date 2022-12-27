@@ -20,14 +20,14 @@
         <div class="commands">
             <table>
                 <thead>
-                    <tr>
+                    <tr class="indigo">
                         <th colspan="2">Git commands</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>git remote add</td>
-                        <td>Connect remote repository to local Git repository</td>
+                        <td>git remote add &lt;local_repo&gt; &lt;github_repo_url&gt;</td>
+                        <td>Connect local repository remote repository</td>
                     </tr>
                     <tr>
                         <td>git push</td>
@@ -43,15 +43,15 @@
 
         <div class="instructions">
             <div class="container mb-2">
-                <h2>Creating GitHub account</h2>
-                <p class="mb-1">To create github account go to <a target="_blank" href="https://github.com/">https://github.com/</a>, click on 'Sign up' and fill out the registration form.</p>
+                <h2 class="indigo">Creating GitHub account</h2>
+                <p class="mb-1">To create GitHub account go to <a target="_blank" href="https://github.com/">https://github.com/</a>, click on 'Sign up' and fill out the registration form.</p>
                 <img src="screenshots/github-signup.png" class="mb-1" height="200px">
                 <p class="mb-1">Confirm account creation via email.</p>
             </div>
 
             <div class="container mb-2">
-                <h2>Creating new repository</h2>
-                <p class="mb-1">To create new github repository click + icon in top right corner and choose 'New repository'.</p>
+                <h2 class="indigo">Creating new repository</h2>
+                <p class="mb-1">To create new GitHub repository click + icon in top right corner and choose 'New repository'.</p>
                 <img src="screenshots/new-repo.png" class="mb-1" height="200px">
                 <p class="mb-1">Fill in new repository name, choose 'Public' or 'Private' which determines who can see your repository, but no one can make edits without your permision.</p>
                 <p class="mb-1">Rest of the fields are optional.</p>
@@ -60,13 +60,61 @@
             </div>
 
             <div class="container mb-2">
-                <h2>Connecting git repository (local) to GitHub repository (cloud)</h2>
-                <p class="mb-1">To connect remote repository to local repository use <span class="inline-box"><strong>git remote add &lt;repo_name&gt; &lt;github_repo_url&gt;</strong></span>.</p>
-                <p class="mb-1">By convention <strong>&lt;repo_name&gt;</strong> or local identifier is usually 'origin'.</p>
-                <p class="mb-1"><strong>&lt;github_repo_url&gt;</strong> can be found on github repository.</p>
+                <h2 class="indigo">Connecting git repository (local) to GitHub repository (cloud)</h2>
+                <p class="mb-1">To connect remote repository to local repository use <span class="inline-box"><strong>git remote add &lt;local_repo_identifier&gt; &lt;github_repo_url&gt;</strong></span>.</p>
+                <p class="mb-1">By convention <strong>&lt;local_repo_identifier&gt;</strong> or local repository name is usually 'origin'.</p>
+                <p class="mb-1"><strong>&lt;github_repo_url&gt;</strong> can be found on GitHub repository.</p>
                 <img src="screenshots/repo-url.png" class="mb-1" height="100px">
-                
             </div>
+
+            <div class="container mb-2">
+                <h2 class="indigo">Generating GitHub token</h2>
+                <p class="mb-1">Personal access token should be generated in GitHub to get password for pushing commits.</p>
+                <p class="mb-1">Click profile icon on GitHub / Settings / Developer settings (on the bottom of left sidebar) / Personal access tokens / Tokens (classic) / Generate new token / Generate new token (classic)</p>
+                <p class="mb-1">Enter your GitHub password</p>
+
+                <div class="img-container">
+                    <img src="screenshots/settings.png" class="mb-1" height="300px">
+                    <img src="screenshots/dev-settings.png" class="mb-1" height="100px">
+                    <img src="screenshots/gen-token.png" class="mb-1" height="100px">
+                    <img src="screenshots/conf-access.png" class="mb-1" height="100px">
+                </div>
+                <p class="mb-1">Write note (optional), set expiration, check 'repo' checkbox and click the 'Generate token' button on the bottom of the current page.</p>
+                <div class="img-container">
+                    <img src="screenshots/token-settings.png" class="mb-1" height="250px">
+                    <img src="screenshots/gen-btn.png" class="mb-1" height="50px">
+                </div>
+                <p class="mb-1">You will get token password that will be visible just once so save it somewhere. You can always generate new token if previous one expired or is lost.</p>
+                <img src="screenshots/token-pass.png" class="mb-1" height="150px">
+            </div>
+
+            <div class="container mb-2">
+                <h2 class="indigo">Pushing local commits to the remote repository</h2>
+                <p class="mb-1">First we need to set access permission for remote repository</p>
+                <p class="mb-1">To edit url of the remote repository use <span class="inline-box"><strong>git remote set-url origin &lt;github_repo_url&gt;</strong></span>.</p>
+                <p class="mb-1">Right in front of github.com add GitHub username with '@' symbol at the end.</p>
+                <p class="mb-1">e.g. https://<strong>Spevak21@</strong>github.com/Spevak21/test.git</p>
+                <p class="mb-1">This url could be also edited in previous step with command <span class="inline-box"><strong>git remote add &lt;local_repo_identifier&gt; &lt;github_repo_url&gt;</strong></span>.</p>
+                <hr />
+                <p class="mb-1">To be able to push local commits to remote repository we need to set upstream branch.</p>
+                <p class="mb-1">To set upstream branch use <span class="inline-box"><strong>git push &lt;local_repo_identifier&gt; &lt;branch_name&gt;</strong></span>.</p>
+                <p class="mb-1">If branch with given name exist it will push commit to it and if not it will create remote branch with that name and then push to it.</p>
+                <p class="mb-1">If we try to push commit after editing url we will be prompted for password.</p>
+                <img src="screenshots/pass-prompt.png" class="mb-1" height="50px">
+                <p class="mb-1">Use password from token generating.</p>
+                
+
+                
+            </div> 
+
+            <!-- <div class="container mb-2">
+                <h2>Pushing local commits to GitHub</h2>
+                <p class="mb-1">To be able to push local commits to remote repository we need to set upstream branch</p>
+                <p class="mb-1">To set upstream branch use <span class="inline-box"><strong>git push &lt;local_repo_identifier&gt; &lt;branch_name&gt;</strong></span>.</p>
+                <p class="mb-1">e.g. <strong>git push origin main</strong></p>
+
+                <p class="mb-1">To push local commits use <span class="inline-box"><strong>git push &lt;github_repo_url&gt;</strong></span>.</p>
+            </div>     -->
         </div>
     </main>
 </body>
