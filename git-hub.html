@@ -27,16 +27,21 @@
                 <tbody>
                     <tr>
                         <td>git remote add &lt;local_repo&gt; &lt;github_repo_url&gt;</td>
-                        <td>Connect local repository remote repository</td>
+                        <td>Connect local repository to remote repository</td>
                     </tr>
                     <tr>
-                        <td>git push</td>
+                        <td>git remote set-url &lt;local_repo_identifier&gt; &lt;github_repo_url&gt;</td>
+                        <td>Set/Edit URL of the remote repository</td>
+                    </tr>
+                    <tr>
+                        <td>git push &lt;local_repo_identifier&gt; &lt;branch_name&gt;</td>
                         <td>Upload local commits</td>
                     </tr>
                     <tr>
                         <td>git pull</td>
                         <td>Download remote commits</td>
                     </tr>
+                    
                 </tbody>
             </table>
         </div>
@@ -91,10 +96,10 @@
             <div class="container mb-2">
                 <h2 class="indigo">Pushing local commits to the remote repository</h2>
                 <p class="mb-1">First we need to set access permission for remote repository.</p>
-                <p class="mb-1">To edit url of the remote repository use <span class="inline-box"><strong>git remote set-url origin &lt;github_repo_url&gt;</strong></span>.</p>
+                <p class="mb-1">To edit url of the remote repository use <span class="inline-box"><strong>git remote set-url &lt;local_repo_identifier&gt; &lt;github_repo_url&gt;</strong></span>.</p>
                 <p class="mb-1">Right in front of github.com add GitHub username with '@' symbol at the end.</p>
                 <p class="mb-1">e.g. https://<strong>Spevak21@</strong>github.com/Spevak21/test.git</p>
-                <p class="mb-1">This url could be also edited in previous step with command <span class="inline-box"><strong>git remote add &lt;local_repo_identifier&gt; &lt;github_repo_url&gt;</strong></span>.</p>
+                <p class="mb-1">This url could be also edited in 'Connecting...' step with command <span class="inline-box"><strong>git remote add &lt;local_repo_identifier&gt; &lt;github_repo_url&gt;</strong></span>.</p>
                 <hr />
                 
                 <p class="mb-1">To push commit to GitHub use <span class="inline-box"><strong>git push &lt;local_repo_identifier&gt; &lt;branch_name&gt;</strong></span>.</p>
@@ -103,7 +108,7 @@
                 <img src="screenshots/pass-prompt.png" class="mb-1" height="50px">
                 <p class="mb-1">Use password from token generating.</p>
                 <p class="mb-1">Pushing commits this way will always require token password.</p>
-                
+
             </div> 
         </div>
     </main>
