@@ -38,12 +38,8 @@
                         <td>Upload local commits</td>
                     </tr>
                     <tr>
-                        <td>git pull</td>
+                        <td>git pull &lt;local_repo_identifier&gt; &lt;branch_name&gt;</td>
                         <td>Download remote commits</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Hello from new branch</td>
                     </tr>
                 </tbody>
             </table>
@@ -114,12 +110,25 @@
             </div>
 
             <div class="container mb-2">
+                <h2 class="indigo">Pulling from GitHub repository</h2>
+                <p class="mb-1">To pull latest version from GitHub use <span class="inline-box"><strong>git pull &lt;local_repo_identifier&gt; &lt;branch_name&gt;</strong></span> command.</p>
+            </div> 
+
+            <div class="container mb-2">
                 <h2 class="indigo">Deleting branch from GitHub repository</h2>
                 <p class="mb-1">Click on branch name / View all branches.</p>
                 <img src="screenshots/deleting-branch.png" class="mb-1" height="200px">
                 <p class="mb-1">Click on bin icon next to branch that you want to delete.</p>
                 <img src="screenshots/deleting-branch-2.png" class="mb-1" height="200px">
-            </div> 
+            </div>
+
+            <div class="container mb-2">
+                <h2 class="indigo">Cloning repository from GitHub</h2>
+                <p class="mb-1">Copy link from the repository</p>
+                <img src="screenshots/repo-url-2.png" class="mb-1" height="200px">
+                <p class="mb-1">To clone GitHub repository use <span class="inline-box"><strong>git clone &lt;github_repo_url&gt;</strong></span> command.</p>
+                <p class="mb-1">Cloned repositories establish automatically connection between local and remote repository.</p>
+            </div>
         </div>
     </main>
 </body>
