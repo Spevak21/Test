@@ -96,14 +96,16 @@
                 <p class="mb-1">e.g. https://<strong>Spevak21@</strong>github.com/Spevak21/test.git</p>
                 <p class="mb-1">This url could be also edited in previous step with command <span class="inline-box"><strong>git remote add &lt;local_repo_identifier&gt; &lt;github_repo_url&gt;</strong></span>.</p>
                 <hr />
-                <p class="mb-1">To be able to push local commits to remote repository we need to set upstream branch.</p>
-                <p class="mb-1">To set upstream branch use <span class="inline-box"><strong>git push &lt;local_repo_identifier&gt; &lt;branch_name&gt;</strong></span>.</p>
+                <!-- <p class="mb-1">To be able to push local commits to remote repository we need to set upstream branch.</p> -->
+                <p class="mb-1">To push commit to GitHub use <span class="inline-box"><strong>git push &lt;local_repo_identifier&gt; &lt;branch_name&gt;</strong></span>.</p>
                 <p class="mb-1">If branch with given name exist it will push commit to it and if not it will create remote branch with that name and then push to it.</p>
                 <p class="mb-1">If we try to push commit after editing url we will be prompted for password.</p>
                 <img src="screenshots/pass-prompt.png" class="mb-1" height="50px">
                 <p class="mb-1">Use password from token generating.</p>
-                
+                <p class="mb-1">Pushing commits this way will always require token password</p>
+                <hr />
 
+                <p class="mb-1">To configure strict connection between remote repository and local repository use <span class="inline-box"><strong>git push set-upstream &lt;local_repo_identifier&gt; &lt;branch_name&gt;</strong></span></p>
                 
             </div> 
 
